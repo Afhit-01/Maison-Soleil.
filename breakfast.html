@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breakfast · Maison Soleil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,500..600&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="breakfast">
+
+  <aside>
+    <div class="brand">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <div class="brand-text">
+        <span class="maison">Maison</span>
+        <span class="soleil">Soleil</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li>
+          <a class="item" href="index.html" data-page="stay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            Your stay
+          </a>
+        </li>
+        <li>
+          <a class="item" href="house.html" data-page="house">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+            The house
+          </a>
+        </li>
+        <li>
+          <a class="item" href="around-town.html" data-page="around-town">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+            Around town
+          </a>
+        </li>
+        <li>
+          <a class="item" href="breakfast.html" data-page="breakfast">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21c0-4 3-6 8-6s8 2 8 6"/><circle cx="12" cy="8" r="4"/></svg>
+            Breakfast
+          </a>
+        </li>
+        <li>
+          <a class="item" href="messages.html" data-page="messages">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            Messages
+          </a>
+          <span class="badge" id="messages-badge" hidden></span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="weather-card">
+      <div class="eyebrow">Today in Cassis</div>
+      <div class="temp">27°</div>
+      <div class="desc">Sunny · light breeze</div>
+    </div>
+
+    <div class="sidebar-footer">
+      EST. 1987<br>
+      MAISON SOLEIL · 12 RUE DES OLIVIERS · CASSIS<br>
+      © 2026 MAISON SOLEIL
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow-line">TERRACE · BREAKFAST</div>
+      <h1>Order for <em>tomorrow.</em></h1>
+      <p>Served 8:00–10:30 on the terrace. Choose what you'd like and a time, and it'll be ready when you come down.</p>
+    </div>
+
+    <div class="breakfast-layout">
+      <form id="breakfast-form" novalidate>
+        <div class="menu-grid" id="menu-grid"></div>
+
+        <div class="field">
+          <label for="delivery-time">Ready at</label>
+          <input type="time" id="delivery-time" name="delivery-time" min="08:00" max="10:30" value="08:30" step="900">
+          <div class="hint" id="time-hint">Between 8:00 and 10:30.</div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Notes for the kitchen</label>
+          <textarea id="notes" name="notes" placeholder="Allergies, dietary notes, or anything else…"></textarea>
+        </div>
+
+        <button class="btn btn-dark" type="submit">Send order</button>
+      </form>
+
+      <aside class="order-summary">
+        <h3>Your order</h3>
+        <div id="order-status"></div>
+        <ul id="order-list"></ul>
+        <button class="btn btn-ghost" id="clear-order" type="button" style="width:100%; display:none;">Clear order</button>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/breakfast.js"></script>
+</body>
+</html>
