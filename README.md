@@ -1,4 +1,4 @@
-# Maison Soleil — Your Stay
+# Maison Soleil, Your Stay
 
 A guest portal for a holiday rental in Cassis, France. Static HTML/CSS with
 vanilla JavaScript for interactivity.
