@@ -5,6 +5,7 @@
  * as a plain object so every page can render/validate against the
  * same facts (dates, wifi, host notes, etc).
  */
+
 window.MS_DATA = {
 
   booking: {
