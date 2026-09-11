@@ -129,4 +129,4 @@ The temperature and conditions are fetched live from
 France, and update the card on load. If the request fails or is blocked
 (offline, ad-blocker, `file://` restrictions in some browsers), the card
 falls back to the static values already in the HTML — it fails quietly
-rather than breaking the page.
+rather than breaking the page...
