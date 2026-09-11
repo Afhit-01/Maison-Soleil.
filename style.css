@@ -12,6 +12,8 @@
     --paper: #FBF8F2;
 }
 
+/*Global reset*/
+
 * {
     margin: 0;
     padding: 0;
